@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>To do list</title>
+</head>
+<body>
+    <header id="head">
+        <ul class="menu">
+            <li><i class="fa-regular fa-calendar-days" style="font: size 68px;"></i> Today</li>
+            <li>Work</li>
+        </ul>
+    </header>
+    <div class="fbox">
+    <div class="topbox">
+        <div>Work List</div>
+    </div>
+</div>
+<div class="secbox">
+    <div class="sbox">
+    <form class="entry" action="/add" method="post">
+        <input type="text" name="todo"placeholder="enter the work">
+        <button type="submit" class="add"><i class="fa-solid fa-plus"></i></button>
+    </form>
+</div>
+</div>
+<div class="lbox">
+<div class="todobox">
+    <% if(locals.tasks){ %>
+        <form action="/delete" method="post">
+        <% tasks.forEach(item => { %>
+            
+            <div class="item">
+                <!-- <input type="checkbox" class="cheakbox" name="check" value="<%#= tasks[i] %>" /> -->
+                <input type="checkbox" class="cheakbox" name="check"value="<%=item._id%>" />
+                <!-- <p><%#= tasks[i] %> </p> -->
+                <p><%= item.name %> </p>
+        </div>
+    <% })} %>
+    <button type="submit">delete</button>
+</form>
+</div>
+</div>
+<footer>
+    Copyright @ <%= new Date().getFullYear() %>
+</footer>
+<!-- </div>
+</div> -->
+</body>
+</html>
+
+
+
+
+
+
+<!-- extra functionality -->
+<%#<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="head">
+        <ul class="menu">
+            <li><i class="fa-regular fa-calendar-days" style="font: size 68px;"></i> Today</li>
+            <li>Work</li>
+        </ul>
+    </header>
+    <div class="fbox">
+    <div class="topbox">
+        <div>Work List</div>
+    </div>
+</div>
+<div class="secbox">
+    <div class="sbox">
+    <form action="/add" method="post">
+        <input type="text" name="todo"placeholder="enter the work">
+        <button type="submit" class="add">add</button>
+    </form>
+</div>
+</div>
+<div class="lbox">
+<div class="todobox">      
+     if(locals.tasks){ 
+         for( var i = 0; i < tasks.length; i++){ 
+            <div class="item">
+                <p><input type="checkbox" class="cheakbox" name="check" value=" tasks[i] " /> tasks[i]  </p>
+        </div>
+     }} 
+</div>
+<div class="mbox">
+<h2>Completed Task</h2>
+<div class="todobox2">
+     if(locals.comple) {
+     for( var i = 0; i < comple.length; i++){ 
+        <div class="item">
+       <p> comple[i]  </p>
+    </div>
+ }} 
+</div>
+</div>
+</div>
+    <form action="/removetask" method="post">
+<button type="submit" class="rembox"> Remove </button>
+</form>
+<footer>
+    Copyright @  new Date().getFullYear() 
+</footer>
+</body>
+</html>
+%>
