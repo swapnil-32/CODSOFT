@@ -1,0 +1,231 @@
+html {
+    overflow-x: hidden;
+}
+body{
+    background-color: black;
+    overflow-x: hidden;
+    color: white;
+    /* position: relative;
+    top: 0px; */
+}
+*{
+    margin: 0;
+    font-family: Arial;
+    border: border-box;  
+    scroll-behavior: smooth; 
+}
+#navbar_top{
+    position: fixed;
+    top: 0;
+}
+.portfolio {
+    position: relative;
+    top: 0;
+    font-size: 31px;
+}
+.navbar{
+    background-color: #9466c3;
+    display: flex;
+    font-size: 20px;
+   width: 100%;
+}
+.navbar li{
+list-style:none;
+margin:13px,20px;
+padding-top: 8px;
+}
+.navbar li a{
+    text-decoration: none;
+    padding:10px 10px;
+    margin:14px;
+    color:aliceblue;
+    }
+    .navbar ul{
+display: flex;
+}
+.navbar li:hover{
+    transform: scale(1.2);
+}
+.navbar li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #523ee8;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navbar li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .name{
+    display: flex;display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .name h2, .name p{
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+animation: flow 2s ease-out 0s 1 normal;
+  }
+  .name p{
+    font-size: 20px;
+  }
+  @keyframes flow {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+  }
+.image img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.headr{
+    display: flex;
+    /* margin: 26px; */
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 28px;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 598px;
+    /* right: 0; */
+}
+.aboutinfo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 27px;
+    
+}
+.skills h2,p{
+    text-align: center;
+    margin: 21px;
+}
+.skills p{
+    font-size: 20px;
+}
+.skillsbox1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 34px;
+}
+.skillsbox2{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 34px;
+}
+.additionalskill{
+    text-align: center;
+    font-size: 20px;
+}
+.boxes{
+    width: 220px;
+    height: 218px;
+    border: 2px solid white;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+.boxes:hover{
+    transform: scale(1.2);
+    box-shadow: 10px 10px 10px green;
+}
+.boxes span{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.aboutinfo p{
+    width: 265px;
+    font-size: 23px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.projects{
+    margin-top: 86px;
+}
+.projkt{
+    text-align: center;
+
+}
+.row1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 50px 0 10px 0;
+}
+.row2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 6px 0 10px 0;
+}
+.box{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   /* margin-left: 51px; */
+   width: 100%;
+   font-size: 18px;
+}
+.boximg1 img{
+    vertical-align: middle;
+
+    width: 528px;
+    height: 304px;
+    margin: 2px;
+}
+.boximg2 img{
+    vertical-align: middle;
+    /* width: 270px;
+    height: 258px; */
+    width: 528px;
+    height: 337px;
+    margin: 12px;
+}
+.resume{
+    margin-top: 42px;
+}
+.resume h2{
+    text-align: center;
+}
+.resume a{
+    color: green;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: aliceblue;
+    margin-top: 30px;
+}
+.contact ul li{
+    padding: 8px;
+}
